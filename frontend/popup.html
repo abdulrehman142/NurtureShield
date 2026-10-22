@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NurtureShield</title><link rel="stylesheet" href="popup.css"><script type="module" src="popup.js"></script>
+</head>
+<body>
+<main>
+  <header class="brand">
+    <span class="brand-mark" aria-hidden="true"><img src="icons/shield-48.png" alt=""></span>
+    <div><h1>NurtureShield</h1><p>Check the link before you trust the click.</p></div>
+  </header>
+  <div id="input-view">
+    <section class="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title">Check a link before opening it</h2>
+      <p>Paste any web address below. NurtureShield checks its URL patterns for signs of suspicious or malicious links—without visiting the destination.</p>
+    </section>
+    <form id="checker" novalidate>
+      <label for="url">Link to check</label>
+      <input id="url" type="text" inputmode="url" maxlength="8192" placeholder="Paste or enter a web address" spellcheck="false" autocapitalize="none" autocomplete="off" aria-describedby="error">
+      <button id="check" class="primary" type="submit"><span id="check-label">Check Link</span><span class="button-arrow" aria-hidden="true">↗</span><span class="spinner" aria-hidden="true"></span></button>
+      <button id="current-tab" class="text-button current-tab" type="button"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="4" width="14" height="12" rx="2"/><path d="M3 8h14"/></svg>Use current tab</button>
+    </form>
+  </div>
+  <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+  <p id="error" class="error" role="alert" hidden></p>
+  <section id="auth-state" class="auth-state" hidden aria-labelledby="auth-title">
+    <span class="auth-symbol" aria-hidden="true">↗</span><h2 id="auth-title" tabindex="-1">Sign in required</h2>
+    <p>Sign in to NurtureNet to check links with NurtureShield.</p>
+    <button id="sign-in" class="primary" type="button">Sign in to NurtureNet <span aria-hidden="true">↗</span></button>
+    <button id="auth-retry" class="text-button" type="button">I’ve signed in · Try again</button>
+  </section>
+  <section id="result" hidden aria-labelledby="verdict">
+    <div class="result-summary">
+      <div class="result-top"><span id="risk" class="badge"></span><span class="result-eyebrow">LINK ASSESSMENT</span></div>
+      <h2 id="verdict" tabindex="-1"></h2>
+      <details class="url-details"><summary><span id="checked-url" class="url-text" dir="auto"></span><span class="url-toggle" aria-hidden="true">⌄</span><span class="sr-only">Show full checked URL</span></summary><p id="full-url" dir="auto"></p></details>
+      <div class="probability-row"><span>Malicious probability</span><strong id="probability"></strong></div>
+      <div id="score" class="probability-track" role="meter" aria-label="Malicious probability" aria-valuemin="0" aria-valuemax="100"><span id="score-fill"></span></div>
+      <p id="safety" class="safety-notice"></p>
+    </div>
+    <div class="observations">
+      <h3>What we noticed</h3>
+      <ul id="characteristics"></ul><p id="no-characteristics" hidden>No unusual URL characteristics were identified.</p>
+      <p class="disclaimer">These describe the URL’s structure. They are not causal explanations of the model’s prediction.</p>
+    </div>
+    <button id="another" class="text-button another" type="button"><span aria-hidden="true">←</span> Check another link</button>
+  </section>
+  <footer><span class="privacy-dot" aria-hidden="true"></span> Only the link. Never the destination.</footer>
+</main>
+</body></html>
