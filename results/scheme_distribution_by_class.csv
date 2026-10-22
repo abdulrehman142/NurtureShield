@@ -1,0 +1,5 @@
+original_label,http,https,no_explicit_scheme,other_abnormal
+benign,7.8088,0.4555,91.7357,0.0
+defacement,100.0,0.0,0.0,0.0
+malware,66.4496,28.4331,5.1174,0.0
+phishing,18.9958,7.4032,73.5989,0.0021

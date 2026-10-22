@@ -1,0 +1,27 @@
+# Python environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset - download separately from Kaggle
+Dataset/*
+!Dataset/.gitkeep
+
+# Temporary/log files
+*.log
+*.tmp

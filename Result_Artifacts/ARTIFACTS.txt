@@ -1,0 +1,39 @@
+NurtureShield - Result Artifacts
+================================
+
+All artifacts in this directory were generated from the
+corrected NurtureShield research outputs.
+
+Final production system:
+- Model: HistGradientBoostingClassifier
+- Feature count: 31
+- Production threshold: 0.30
+
+Important evaluation note:
+- final_test_metrics.json stores held-out test results evaluated
+  at threshold 0.24.
+- The production threshold 0.30 was selected separately using
+  validation threshold analysis.
+- Therefore, the held-out confusion matrix must be reported as
+  an evaluation-threshold-0.24 result, not as a threshold-0.30
+  production confusion matrix.
+
+Generated files:
+- 01_final_model_performance.csv
+- 01_final_model_performance.pdf
+- 01_final_model_performance.png
+- 02_confusion_matrix.csv
+- 02_confusion_matrix.pdf
+- 02_confusion_matrix.png
+- 03_model_comparison.pdf
+- 03_model_comparison.png
+- 03_model_comparison_table.csv
+- 04_threshold_analysis.pdf
+- 04_threshold_analysis.png
+- 04_threshold_analysis_table.csv
+- 05_malicious_subtype_performance_table.csv
+- 06_robustness_re_evaluation.pdf
+- 06_robustness_re_evaluation.png
+- 06_robustness_re_evaluation_table.csv
+- 07_scheme_invariance_table.csv
+- 08_scheme_distribution_by_class_table.csv

@@ -1,0 +1,10 @@
+url,probability,prediction,group_probability_range
+example.com,0.26813312175440795,1,0.0
+http://example.com,0.26813312175440795,1,0.0
+https://example.com,0.26813312175440795,1,0.0
+wikipedia.org,0.27571392750492796,1,0.0
+http://wikipedia.org,0.27571392750492796,1,0.0
+https://wikipedia.org,0.27571392750492796,1,0.0
+en.wikipedia.org/wiki/Flower,0.3350078399167838,1,0.0
+http://en.wikipedia.org/wiki/Flower,0.3350078399167838,1,0.0
+https://en.wikipedia.org/wiki/Flower,0.3350078399167838,1,0.0
